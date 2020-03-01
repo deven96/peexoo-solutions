@@ -104,7 +104,7 @@ def recognize():
             probability = result["probability"]
             iden = result["id"]
             if probability > 0.5:
-                flash(f"Recognized as {name} with {round(probability)*100}% certainty", "success")
+                flash(f"Recognized as {name} with {round(probability, 2)*100}% certainty", "success")
                 photos[name] = get_photos_from_id(iden)
         return render_template('find.html', photos=photos)
     else:
