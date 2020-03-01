@@ -25,7 +25,7 @@
                     dataType: 'json',
                     add: function(e, data) {
                         data.submit();
-                        $('#image-preview').append('<img class="preview-image" src="' + URL.createObjectURL(data.files[0]) + '"/>');
+                        $('#image-preview').append('<img class="preview-image img-fluid" src="' + URL.createObjectURL(data.files[0]) + '"/>');
                     },
                     success: function(response, status) {
                         console.log(response);
@@ -109,7 +109,7 @@
      
                 <!-- Text input-->
                 <div class="form-group">
-                    <img src="{{  url_for('logo') }}">
+                    <img src="{{  url_for('logo') }}" class="img-fluid">
      
                 </div>
      
