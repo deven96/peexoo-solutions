@@ -94,8 +94,8 @@ def recognize():
         results = client.recognize(photo=photo)
         os.remove(photo)
         try:
-            results[0]
-        except KeyError:
+            test = results[0]
+        except KeyError, IndexError:
             flash(f"Could not recognize photo", "error")
             return render_template('find.html', photos={})
         photos = {}
