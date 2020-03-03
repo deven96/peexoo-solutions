@@ -89,6 +89,7 @@ def register():
 def recognize():
     photo = None
     for _, _, filenames in os.walk(app.config["UPLOAD_FOLDER"]):
+        print(filenames)
         photo = os.path.join(app.config["UPLOAD_FOLDER"], filenames[0])
     if photo:
         results = client.recognize(photo=photo)
